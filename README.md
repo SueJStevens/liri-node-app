@@ -62,9 +62,11 @@ Timothy started out as Homework Assignment #10 for UCSD Coding Bootcamp.  The of
 
 ### Request a Movie
 #### User supplies valid arguments via command line for a movie that exists in OMDB API
-- Screen shot results here:
+![movie](https://user-images.githubusercontent.com/39141985/47262613-414a9f00-d4a2-11e8-98a3-a13921729b76.png)
+#### User supplies valid arguments and movie exists but ratings for movie do not exist.
+![notrated](https://user-images.githubusercontent.com/39141985/47262661-e4e87f00-d4a3-11e8-83e8-00b57b273148.png)
 #### User supplies valid arguments via command line for a movie that does not exist in OMDB API
-- Screen shot results here:
+![movienotfound](https://user-images.githubusercontent.com/39141985/47262730-0f870780-d4a5-11e8-9c37-2dcc0d8f057b.png)
 #### User supplies arguments via text file.  Only the valid argument example shown here
 - Screen shot results here:
 

@@ -199,9 +199,12 @@ function movieThis(operatorIn, valueIn) {
 
   function ratingData(body) {
     // Rotten Tomatoes Rating of the movie. //an array
+    result = "Not Rated";
     for (var i = 0; i < JSON.parse(body).Ratings.length; i++) {
       if (JSON.parse(body).Ratings[i].Source === 'Rotten Tomatoes') {
         result = (JSON.parse(body).Ratings[i].Value);
+      } else {
+        result = "Not Rated";
       }
     };
     return result;

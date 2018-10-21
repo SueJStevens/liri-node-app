@@ -5,7 +5,7 @@ spotify-this-song,Legend Of A Mind
 
 spotify-this-song,Let The Sunshine In
 
-movie-this,Dying to Know
+movie-this Dying to Know
 
 movie-this,Cinderella
 
