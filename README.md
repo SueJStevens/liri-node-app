@@ -1,16 +1,16 @@
 # Timothy (aka liri-node-app)
 
 ## What is Timothy?
-Timothy is an application that will search Spotify for songs, Bands in Town for concerts, and OMDB for movies.  It is sort-a-like SIRI but it can't take in voice commands.  The user must interface with Timothy through a text file or the command line.  Timothy will return useful information on par with the usefullness of the input provided by the user.  The user can input from the command line or through a text file.     
+Timothy is an application that will search Spotify for songs, Bands in Town for concerts, and OMDB for movies.  It is sort-a-like SIRI but it can't take in voice commands.  The user must interface with Timothy through a text file or the command line.  Timothy will return useful information on par with the input provided by the user.  The user can type on the command line or the application can read a text file.     
 
 Timothy started out as Homework Assignment #10 for UCSD Coding Bootcamp.  The official name of the assignment is 'Liri-Node_App'.  Since the assignment occured on the same week as C-Day, the application naturally morphed into Timothy.
 
 ## Requirements
-- Make a command line Node.js app that depends on user input (parameters) from the command line and can also accept user input from text file.
+- Make a command line Node.js app that depends on user provided parameters from the command line and can also accept user input from text file.
 - The app will return formatted data from these APIs:
-  1. Bands in Town
-  2. Spotify
-  3. OMDB
+  - Bands in Town
+  - Spotify
+  - OMDB
 
 ## Technology
 ### Node.js
@@ -18,12 +18,12 @@ Timothy started out as Homework Assignment #10 for UCSD Coding Bootcamp.  The of
 - Request (https://www.npmjs.com/package/request)
 - Moment (https://www.npmjs.com/package/moment)
 - DotEnv (https://www.npmjs.com/package/dotenv)
-- fs (npm install fs)
+- Node.js: fs-filesystem
 ### API (via npm module)
 - Bands In Town API (http://www.artists.bandsintown.com/bandsintown-api)
 - Spotify API (https://www.npmjs.com/package/node-spotify-api)
 - OMDB API (http://www.omdbapi.com)
-### Coding Language
+### Coding Languages
 - JavaScript
 - Markdown
 
@@ -34,11 +34,11 @@ Timothy started out as Homework Assignment #10 for UCSD Coding Bootcamp.  The of
 - The application will return information from one of the three APIs depending on what the user requests via the command line or via the text file.  There are limits on the information returned and to be useful, the user must type in valid commands.
   - concert-this + the name of an artist will return the concert venue hosting the requested artist that is located nearest to the user. (The logic behind this is simple:  SIRI always knows where you are.  All.The.Time.)
   - spotify-this-song + the name of an album track will return up to 5 albums that contain the song and other useful information.
-  - movie-this + the name of a movie will return 
+  - movie-this + the name of a movie will return useful information about the move, including movie ratings.
   - do-what-it-says will return the same information as 'concert-this', 'spotify-this-song', or 'movie-this' except the value comes from the text file rather than from the user input on the command line.
 
 ## Use Cases
-### Request a Concert
+### <u>Request a Concert</u>
 #### User supplies valid arguments via command line for a concert that exists in Bands in Town API
 - Screen shot results here:
 #### User supplies valid arguments via command line for a concert that does not exist in Bands in Town API

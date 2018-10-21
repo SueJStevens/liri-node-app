@@ -1,3 +1,7 @@
+/*Global Variables
+-------------------------------------------------------------------------------
+Spotify
+*/
 //add code to read and set any environment variables with the dotenv package:
 require("dotenv").config();
 
@@ -11,13 +15,21 @@ var spotify = new Spotify(keys.spotify);
 // Store user supplied arguments in an array
 var nodeArgs = process.argv;
 
-//set up an array of valid user requests:
+/*
+-------------------------------------------------------------------------------
+Array of valid user requests:
+*/
 var ArrValidOperators = [
   "concert-this",
   "spotify-this-song",
   "movie-this",
   "do-what-it-says",
 ]
+
+/*
+-------------------------------------------------------------------------------
+User Input, Validation, and seting global Operator and Value variables:
+*/
 
 //get user input & validate it
 if (process.argv[2] === undefined) {
@@ -48,6 +60,10 @@ if (process.argv[2] === undefined) {
     processUserRequest(operator, value);
   } //end
 } //end test user input
+
+/*Functions
+-------------------------------------------------------------------------------
+*/
 
 //process user request
 function processUserRequest(operator, value) {
