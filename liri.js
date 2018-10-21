@@ -249,8 +249,8 @@ function concertThis(operatorIn, valueIn) {
         */
 
         //Carlsbad CA Lat/Long
-        var myLat = 33.0990465;
-        var myLong = -117.267091;
+        //var myLat = 33.0990465;
+        //var myLong = -117.267091;
 
         //Seattle Washington Lat/Long
         //var myLat = 47.6129432;
@@ -261,8 +261,8 @@ function concertThis(operatorIn, valueIn) {
         //var myLong = -82.2118206;
 
         //Washington DC Lat/Long 
-        //var myLat = 38.890193;
-        //var myLong = -76.991921;
+        var myLat = 38.890193;
+        var myLong = -76.991921;
 
         var venueLat = 0;
         var venueLong = 0;

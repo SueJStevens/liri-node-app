@@ -40,13 +40,14 @@ Timothy started out as Homework Assignment #10 for UCSD Coding Bootcamp.  The of
 ## Use Cases
 ### Request a Concert
 #### User supplies valid arguments via command line for a concert that exists in Bands in Town API
-- Screen shot results here:
+- Note:  SIRI knows where you are All.The.Time.  So here is the concert near my house:
+![carlsbad_venue](https://user-images.githubusercontent.com/39141985/47262388-6e944e80-d49c-11e8-885e-7f949c3fc389.png)
+- the concert near the White House:
+![nyc_venue](https://user-images.githubusercontent.com/39141985/47262389-73f19900-d49c-11e8-92ae-a763c630da00.png)
 #### User supplies valid arguments via command line for a concert that does not exist in Bands in Town API
-- Screen shot results here:
-#### User fails to supply value argument
-- Screen shot results here:
+![concert_not_in_api](https://user-images.githubusercontent.com/39141985/47262413-1742ae00-d49d-11e8-8106-269d2738f6a5.png)
 #### User supplies arguments via text file.  Only the valid argument example shown here
-- Screen shot results here:
+![dowhatitsays_concert](https://user-images.githubusercontent.com/39141985/47262447-f464c980-d49d-11e8-8b4c-c42fa25732ef.png)
 
 
 ### Request a Song
@@ -54,24 +55,31 @@ Timothy started out as Homework Assignment #10 for UCSD Coding Bootcamp.  The of
 - Screen shot results here:
 #### User supplies valid arguments via command line for a song from an album track that does not exist in Spotify API
 - Screen shot results here:
-#### User fails to supply value argument
-- Screen shot results here:
 #### User supplies arguments via text file.  Only the valid argument example shown here
 - Screen shot results here:
+
 
 ### Request a Movie
 #### User supplies valid arguments via command line for a movie that exists in OMDB API
 - Screen shot results here:
 #### User supplies valid arguments via command line for a movie that does not exist in OMDB API
 - Screen shot results here:
-#### User fails to supply value argument
-- Screen shot results here:
 #### User supplies arguments via text file.  Only the valid argument example shown here
 - Screen shot results here:
 
 ### Examples of Invalid Requests
+*Note:* Typos that cause no results from API return same as if no arguments supplied.
 #### Arguments Not Supplied
 ![arguments_not_supplied](https://user-images.githubusercontent.com/39141985/47262267-d5176d80-d498-11e8-8635-5ee5e9c0d3df.png)
+#### Concert Artist Not Supplied
+![concert_artist_not_supplied](https://user-images.githubusercontent.com/39141985/47262290-9a620500-d499-11e8-97f1-338c039acbd4.png)
+#### Song Track Not Supplied
+![song_track_not_supplied](https://user-images.githubusercontent.com/39141985/47262306-017fb980-d49a-11e8-8551-41eed366863e.png)
+#### Movie Name Not Supplied
+![movie_name_not_supplied](https://user-images.githubusercontent.com/39141985/47262313-473c8200-d49a-11e8-96be-cad9bc308566.png)
+#### Example of Song Request with Typo
+![typo](https://user-images.githubusercontent.com/39141985/47262348-756e9180-d49b-11e8-88c7-9e886204cfa5.png)
+
 
 ## Author & Copyright
 Sue J. Stevens (StevensStock@gmail.com) &copy;2018. All Rights Reserved.
