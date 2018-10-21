@@ -95,7 +95,7 @@ function spotifyThisSong(operatorIn, valueIn) {
             "The Name of the Album is: " + data.tracks.items[i].album.name,
             "The Preview URL is: " + data.tracks.items[i].preview_url,
             "The ID: " + data.tracks.items[i].id,
-            "----------------------------------------------------------------------"
+            "-----------------------------------------------------------------"
           ].map(function (x) { return x.replace(/null/g, 'Not Available'); }).join("\n");
           console.log(tracksData);
         }
@@ -124,7 +124,7 @@ function defaultSpecificSpotifySong() {
         "The Name of the Album is: " + data.name,
         "The Preview URL is: " + data.preview_url,
         "The ID: " + data.album.id,
-        "----------------------------------------------------------------------"
+        "--------------------------------------------------"
       ].map(function (x) { return x.replace(/null/g, 'Not Available'); }).join("\n");
       console.log(tracksData);
 

@@ -40,9 +40,9 @@ Timothy started out as Homework Assignment #10 for UCSD Coding Bootcamp.  The of
 ## Use Cases
 ### Request a Concert
 #### User supplies valid arguments via command line for a concert that exists in Bands in Town API
-- Note:  SIRI knows where you are All.The.Time.  So here is the concert near my house:
+- Note:  SIRI knows where you are All.The.Time.  (Check out my JavaScript code to calculate distance!).  Here is the nearest concert/venue to my house:
 ![carlsbad_venue](https://user-images.githubusercontent.com/39141985/47262388-6e944e80-d49c-11e8-885e-7f949c3fc389.png)
-- the concert near the White House:
+- the concert nearest concert/venue to the White House:
 ![nyc_venue](https://user-images.githubusercontent.com/39141985/47262389-73f19900-d49c-11e8-92ae-a763c630da00.png)
 #### User supplies valid arguments via command line for a concert that does not exist in Bands in Town API
 ![concert_not_in_api](https://user-images.githubusercontent.com/39141985/47262413-1742ae00-d49d-11e8-8106-269d2738f6a5.png)
@@ -52,11 +52,12 @@ Timothy started out as Homework Assignment #10 for UCSD Coding Bootcamp.  The of
 
 ### Request a Song
 #### User supplies valid arguments via command line for a song from an album track that exists in Spotify API
-- Screen shot results here:
+![knocking](https://user-images.githubusercontent.com/39141985/47262560-781fb580-d4a0-11e8-8079-5663cc8213cb.png)
 #### User supplies valid arguments via command line for a song from an album track that does not exist in Spotify API
-- Screen shot results here:
+![song_track_not_in_db](https://user-images.githubusercontent.com/39141985/47262593-9afe9980-d4a1-11e8-88f6-ecd67ccd7cda.png)
+- (Yes!, this song is real...look for it here:  https://www.youtube.com/watch?v=NztfOSyCCFM).
 #### User supplies arguments via text file.  Only the valid argument example shown here
-- Screen shot results here:
+![dowhatitsays_song](https://user-images.githubusercontent.com/39141985/47262605-f761b900-d4a1-11e8-8e6b-c65ea7d3dc4f.png)
 
 
 ### Request a Movie
