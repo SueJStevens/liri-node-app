@@ -68,7 +68,7 @@ Timothy started out as Homework Assignment #10 for UCSD Coding Bootcamp.  The of
 #### User supplies valid arguments via command line for a movie that does not exist in OMDB API
 ![movienotfound](https://user-images.githubusercontent.com/39141985/47262730-0f870780-d4a5-11e8-9c37-2dcc0d8f057b.png)
 #### User supplies arguments via text file.  Only the valid argument example shown here
-- Screen shot results here:
+![dowhatitsays_movie](https://user-images.githubusercontent.com/39141985/47262783-adc79d00-d4a6-11e8-941e-801b3007fa8e.png)
 
 ### Examples of Invalid Requests
 *Note:* Typos that cause no results from API return same as if no arguments supplied.
