@@ -38,7 +38,7 @@ Timothy started out as Homework Assignment #10 for UCSD Coding Bootcamp.  The of
   - do-what-it-says will return the same information as 'concert-this', 'spotify-this-song', or 'movie-this' except the value comes from the text file rather than from the user input on the command line.
 
 ## Use Cases
-### <u>Request a Concert</u>
+### Request a Concert
 #### User supplies valid arguments via command line for a concert that exists in Bands in Town API
 - Screen shot results here:
 #### User supplies valid arguments via command line for a concert that does not exist in Bands in Town API
@@ -68,6 +68,10 @@ Timothy started out as Homework Assignment #10 for UCSD Coding Bootcamp.  The of
 - Screen shot results here:
 #### User supplies arguments via text file.  Only the valid argument example shown here
 - Screen shot results here:
+
+### Examples of Invalid Requests
+#### Arguments Not Supplied
+![arguments_not_supplied](https://user-images.githubusercontent.com/39141985/47262267-d5176d80-d498-11e8-8635-5ee5e9c0d3df.png)
 
 ## Author & Copyright
 Sue J. Stevens (StevensStock@gmail.com) &copy;2018. All Rights Reserved.

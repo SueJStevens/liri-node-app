@@ -76,53 +76,14 @@ function spotifyThisSong(operatorIn, valueIn) {
   console.log("Value: " + valueIn);
   console.log("=========================================");
 
-  // //add code to read and set any environment variables with the dotenv package:
-  // require("dotenv").config();
-
-  // //Add the code required to import the `keys.js` file and store it in a variable.
-  // var keys = require('./keys');
-
-  // //Access the spotify API
-  // var Spotify = require('node-spotify-api');
-
-  // var spotify = new Spotify(keys.spotify);
-
-  //set the name of the song to search for as a variable
   var trackName = valueIn;
-
-  /*search with callback -- We are going to use promises instead
-  spotify.search({ type: 'track', query: trackName, limit: '5' }, function (err, data) {
-    if (err) {
-      return console.log('Error occurred: ' + err);
-    }
-  
-    itemNum = 0;
-    for (var i = 0; i < data.tracks.items.length; i++) {
-      console.log(i+1+".");
-      console.log("The Name of the Song is: " + data.tracks.items[i].name)
-      console.log("The Name of the Artist is: " + data.tracks.items[i].artists[0].name);
-      console.log("The Name of the Album is: " + data.tracks.items[i].album.name);
-      console.log("The Preview URL is: " + data.tracks.items[i].preview_url)
-      console.log("The ID: "+ data.tracks.items[i].id)
-      console.log("-------------------------------------------------------------")
-    }
-  });
-  */
 
   //search with promises -- We are going to use this
   spotify
     .search({ type: 'track', query: trackName, limit: '5' })
     .then(function (data) {
 
-//      console.log(JSON.stringify(data));
-      //console.log(data.tracks.items.length);
-      //if(data.tracks.items.length != 0) {
-      //  console.log("I'm zero!!")
-     // };
-
-      //test for situation where no song is returned
-//      if (data.length.items!= 0 && data.tracks.items.length != 0) {
-  if (data.tracks.items.length != 0) {
+      if (data.tracks.items.length != 0) {
 
         itemNum = 0;
         for (var i = 0; i < data.tracks.items.length; i++) {
@@ -137,43 +98,11 @@ function spotifyThisSong(operatorIn, valueIn) {
             "----------------------------------------------------------------------"
           ].map(function (x) { return x.replace(/null/g, 'Not Available'); }).join("\n");
           console.log(tracksData);
-
-
-          /*
-                    console.log("Search for a song and return 5 items")
-                    console.log(i + 1 + ".");
-                    console.log("The Name of the Song is: " + data.tracks.items[i].name)
-                    console.log("The Name of the Artist is: " + data.tracks.items[i].artists[0].name);
-                    console.log("The Name of the Album is: " + data.tracks.items[i].album.name);
-                    console.log("The Preview URL is: " + data.tracks.items[i].preview_url);
-                    console.log("The ID: " + data.tracks.items[i].id);
-                    console.log("-------------------------------------------------------------")
-          */
         }
 
       } else {
-        //request a particular song
-        //If no song is provided then your program will default to "The Sign" by Ace of Base.
-        spotify
-          .request('https://api.spotify.com/v1/tracks/0hrBpAOgrt8RXigk83LLNE')
-          .then(function (data) {
-
-            var tracksData = [
-              "The Name of the Song is: " + data.album.name,
-              "The Name of the Artist is: " + data.album.artists[0].name,
-              "The Name of the Album is: " + data.name,
-              "The Preview URL is: " + data.preview_url,
-              "The ID: " + data.album.id,
-              "----------------------------------------------------------------------"
-            ].map(function (x) { return x.replace(/null/g, 'Not Available'); }).join("\n");
-            console.log(tracksData);
-
-          })
-          .catch(function (err) {
-            console.error('Error occurred: ' + err);
-          });
-
-
+        console.log("The song you requested can't be found but maybe you would like this song:")
+        defaultSpecificSpotifySong();
       }
 
     })
@@ -182,6 +111,28 @@ function spotifyThisSong(operatorIn, valueIn) {
     });
 
 }; //end spotifyThisSong function
+
+function defaultSpecificSpotifySong() {
+  //request a particular song to default to when the user request fails
+  spotify
+    .request('https://api.spotify.com/v1/tracks/5AOpCicFkyoNtP5udjctay')
+    .then(function (data) {
+
+      var tracksData = [
+        "The Name of the Song is: " + data.album.name,
+        "The Name of the Artist is: " + data.album.artists[0].name,
+        "The Name of the Album is: " + data.name,
+        "The Preview URL is: " + data.preview_url,
+        "The ID: " + data.album.id,
+        "----------------------------------------------------------------------"
+      ].map(function (x) { return x.replace(/null/g, 'Not Available'); }).join("\n");
+      console.log(tracksData);
+
+    })
+    .catch(function (err) {
+      console.error('Error occurred: ' + err);
+    });
+} //end function to request specific spotify song
 
 //user requested a movie
 function movieThis(operatorIn, valueIn) {
@@ -438,10 +389,19 @@ function identifyOperation(operatorIn, valueIn) {
 
   switch (operatorIn) {
     case "concert-this":
-      concertThis(operatorIn, valueIn);
+      if (valueIn != "") {
+        concertThis(operatorIn, valueIn);
+      } else {
+        console.log("You didn't request a concert, so I can't provide a venue.")
+      }
       break;
     case "spotify-this-song":
-      spotifyThisSong(operatorIn, valueIn);
+      if (valueIn != "") {
+        spotifyThisSong(operatorIn, valueIn);
+      } else {
+        console.log("You didn't request a specific song so we're suggesting this one:")
+        defaultSpecificSpotifySong();
+      }
       break;
     case "movie-this":
       movieThis(operatorIn, valueIn);

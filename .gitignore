@@ -6,3 +6,6 @@ node_modules/
 
 # The Apple macOS DS_Store files
 .DS_Store
+
+# Images
+images/
