@@ -1,0 +1,30 @@
+concert-this,Bob Weir
+concert-this,Moody Blues
+
+spotify-this-song,Legend Of A Mind
+
+spotify-this-song,Let The Sunshine In
+
+movie-this,Dying to Know
+
+movie-this,Cinderella
+
+movie-this,The Man Who Turned On America
+
+
+
+spotify.search({ type: 'track', query: trackName, limit: '5' }, function (err, data) {
+    if (err) {
+      return console.log('Error occurred: ' + err);
+    }  
+      //Data was returned so you can console log it
+    }
+  });
+
+or 
+
+spotify
+    .search({ type: 'track', query: trackName, limit: '5' })
+    .then(function (data) {
+	//Data was returned so you can console log it
+    }
