@@ -1,4 +1,6 @@
 # Timothy (aka liri-node-app)
+Command line node.js app that will search Spotify for songs, Bands in Town for concerts, and OMDB for movies based on user provided parameters or user input from text file.
+Bootcamp Assignment 10/14/2018 - LIRI Bot
 
 ## What is Timothy?
 Timothy is an application that will search Spotify for songs, Bands in Town for concerts, and OMDB for movies.  It is sort-a-like SIRI but it can't take in voice commands.  The user must interface with Timothy through a text file or the command line.  Timothy will return useful information on par with the input provided by the user.  The user can type on the command line or the application can read a text file.     
